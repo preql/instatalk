@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'faker'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
