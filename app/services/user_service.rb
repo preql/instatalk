@@ -21,6 +21,6 @@ class UserService
   end
 
   def render_users
-    ApplicationController.renderer.render(partial: 'users/user', collection: User.online)
+    ApplicationController.renderer.render(partial: 'users/user', collection: User.online_all)
   end
 end
