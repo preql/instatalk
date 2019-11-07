@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Instatalk</title>
-<%= csrf_meta_tags %>
+  <title>Instatalk</title>
+  <%= csrf_meta_tags %>
 
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
@@ -13,12 +13,22 @@
   <div class="row justify-content-md-center">
     <div class="col-md-8">
       <div class="card text-center mt-4 mb-4">
-        <div class="card-body">
+        <div class="card-body bg-light">
           Welcome to Instatalk, <b><%= current_user.nickname %></b>!
         </div>
       </div>
 
+      <div class="card text-center mt-4 mb-4">
+        <div class="card-header">
+          Online:
+        </div>
+        <div class="card-body text-success bg-light" id="users-online">
+          <%= render partial: 'users/user', collection: @users %>
+        </div>
+      </div>
+
       <%= yield %>
+
     </div>
   </div>
 </div>
