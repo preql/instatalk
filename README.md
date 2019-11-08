@@ -1,24 +1,36 @@
-# README
+# Приложение "Instatalk" #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Описание ##
+   Учебное приложение - чат, с возможностью создавать комнаты и общаться в режиме реального времени. При входе генерируется случайный ник, который хранится в куках браузера.
+  
+  
+  `ruby 2.5.5`
+  
+  `rails 5.2.3`
+  
+ Использованные технологии:
+- Фреймворк `Bootstrap`
+- Обновление контента `turbolinks`
+- `ActionCable` — библиотека для рельс, реализующая общения сервера и клиента по протоколу `WebSocket`
 
-Things you may want to cover:
 
-* Ruby version
+## Установка ##
+Скачайте или клонируйте приложение, установите гем `bundler` если у вас его нет:
 
-* System dependencies
+```
+gem install bundler
+```
 
-* Configuration
+Чтобы скачать необходимые библиотеки и подготовить базу данных в дериктории с приложением необходимо выполнить команды:
+```
+bundle install
+bundle exec rake db:migrate
+```
 
-* Database creation
+Запустите сервер командой
+```
+bundle exec rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Демо ##
+Рабочая версия приложения [здесь](https://instagotalk.herokuapp.com/).
